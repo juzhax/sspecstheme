@@ -6,15 +6,15 @@
 
 	@media #{$small-up} {
 		background: url("../images/demo/marquee-stars.svg") repeat scroll 0 0 #074E68;
-		padding: rem-calc(65%) 0;
+		padding: rem-calc(30%) 0;
 		margin: - rem-calc(32) 0 rem-calc(32);
 		position: relative;
 		text-align: left;
 	}
 
 	@media #{$medium-up} {
-		height: rem-calc(400);
-		margin: - rem-calc(32) 0 rem-calc(72);
+		height: auto;
+		margin: - rem-calc(32) 0 rem-calc(32);
 	}
 
 	#watch {

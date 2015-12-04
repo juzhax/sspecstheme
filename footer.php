@@ -16,6 +16,25 @@
 	<footer id="footer">
 		<?php do_action( 'foundationpress_before_footer' ); ?>
 		<?php dynamic_sidebar( 'footer-widgets' ); ?>
+		<div class="row">
+		<div class="small-12 columns">
+		<div class="ssBottomBar contain-to-grid">
+			<div id="ssBbInner" class="autoCenter">
+				<div class="bbBody">
+					<a href="//secretspecs.com/about-us/">About Us</a>
+					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="//secretspecs.com/privacy/">Privacy</a>
+					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="//secretspecs.com/contact-us/">Contact Us</a>
+				</div>
+				<div class="bbBody">
+					Copyright © 2015 
+					<a href="/">Secret Specs</a>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
 		<?php do_action( 'foundationpress_after_footer' ); ?>
 	</footer>
 </div>
