@@ -25,7 +25,7 @@ get_header(); ?>
 			</div>
 			-->
 			<div class="small-8 columns">
-				<input id="name" type="text" name="model" placeholder="Model Name">
+				<input id="search-text" type="text" name="q" autocomplete="off" class="form-control input-sm ng-pristine ng-valid" placeholder="Model Name">
 			</div>
 			<div class="small-4 columns">
 				<button type="submit" class="button postfix radius" onclick="location.href='/search/?q=' + document.getElementById('search-text').value;"><i class="fa fa-search"></i> Search</button>
