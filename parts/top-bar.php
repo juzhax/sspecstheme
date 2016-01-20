@@ -28,35 +28,45 @@
 <?php
 $urlArr = parse_url(filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRIPPED));
 $path = explode('/', $urlArr['path']);
-$crumbString1 = "/".$path[1]."/";
-if ($path[2] != "") {
+$crumbString1 = "//secretspecs.com/".$path[1]."/";
+if (($path[2]) && ($path[2] != "")) {
 	if ($path[1] == 'model') {
-		$crumbString2 = "/brand/".$path[2]."/";	// Redirect /model/<brand name>/ to /brand/<brand name>
+		$crumbString2 = "/secretspecs.com/brand/".$path[2]."/";	// Redirect /model/<brand name>/ to /brand/<brand name>
 	} else {
-		$crumbString2 = "/".$path[1]."/".$path[2]."/";
+		$crumbString2 = "//secretspecs.com/".$path[1]."/".$path[2]."/";
 	}
 }
-if ($path[3] != "") {
-	$crumbString3 = "/".$path[1]."/".$path[2]."/".$path[3]."/";
+if (($path[3]) && ($path[3] != "")) {
+	$crumbString3 = "//secretspecs.com/".$path[1]."/".$path[2]."/".$path[3]."/";
+}
+if (($path[4]) && ($path[4] != "")) {
+	$crumbString4 = "//secretspecs.com/".$path[1]."/".$path[2]."/".$path[3]."/".$path[4]."/";
 }
 if ($path[1]) {
 	echo '<div class="row">';
 		echo '<div class="small-12 columns">';
 				echo '<ul class="breadcrumbs">';
-				if ($path[3] != "") {
-					echo '<li><a href="/">Home</a></li>';
-					echo "<li><a href=$crumbString1>$path[1]</a></li>";
-					echo "<li><a href=$crumbString2>$path[2]</a></li>";
-					echo "<li class='current'><a href=$crumbString3>$path[3]</a></li>";
+				if ($path[4] != "") {
+					echo "<li><a href='//secretspecs.com/' title='Secret Specs'>Home</a></li>";
+					echo "<li><a href=$crumbString1 title='$path[1] listing'>$path[1]</a></li>";
+					echo "<li><a href=$crumbString2 title='$path[2]'>$path[2]</a></li>";
+					echo "<li><a href=$crumbString3 title='$path[3]'>$path[3]</a></li>";
+					echo "<li class='current'><a href=$crumbString4 title='$path[3] - $path[4]'>$path[4]</a></li>";
+				}
+				elseif ($path[3] != "") {
+					echo "<li><a href='//secretspecs.com/' title='Secret Specs'>Home</a></li>";
+					echo "<li><a href=$crumbString1 title='$path[1] listing'>$path[1]</a></li>";
+					echo "<li><a href=$crumbString2 title='$path[2]'>$path[2]</a></li>";
+					echo "<li class='current'><a href=$crumbString3 title='$path[3]'>$path[3]</a></li>";
 				}
 				elseif ($path[2] != "") {
-					echo '<li><a href="/">Home</a></li>';
-					echo "<li><a href=$crumbString1>$path[1]</a></li>";
-					echo "<li class='current'><a href=$crumbString2>$path[2]</a></li>";
+					echo "<li><a href='//secretspecs.com/' title='Secret Specs'>Home</a></li>";
+					echo "<li><a href=$crumbString1 title='$path[1] listing'>$path[1]</a></li>";
+					echo "<li class='current'><a href=$crumbString2 title='$path[2]'>$path[2]</a></li>";
 				}
 				else {
-					echo '<li><a href="/">Home</a></li>';
-					echo "<li class='current'><a href=$crumbString1>$path[1]</a></li>";
+					echo "<li><a href='//secretspecs.com/' title='Secret Specs'>Home</a></li>";
+					echo "<li class='current'><a href=$crumbString1 title='$path[1] listing'>$path[1]</a></li>";
 				}
 				echo '</ul>';
 		echo '</div>';
