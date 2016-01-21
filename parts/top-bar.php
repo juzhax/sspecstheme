@@ -31,7 +31,7 @@ $path = explode('/', $urlArr['path']);
 $crumbString1 = "//secretspecs.com/".$path[1]."/";
 if (($path[2]) && ($path[2] != "")) {
 	if ($path[1] == 'model') {
-		$crumbString2 = "/secretspecs.com/brand/".$path[2]."/";	// Redirect /model/<brand name>/ to /brand/<brand name>
+		$crumbString2 = "//secretspecs.com/brand/".$path[2]."/";	// Redirect /model/<brand name>/ to /brand/<brand name>
 	} else {
 		$crumbString2 = "//secretspecs.com/".$path[1]."/".$path[2]."/";
 	}
