@@ -4,7 +4,7 @@ Template Name: SS Front
 */
 get_header(); ?>
 
-<header id="front-hero" role="banner">
+<header id="front-hero">
 	<div class="row">
 		<div class="small-12 medium-7 columns">
 			<h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
