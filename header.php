@@ -23,6 +23,68 @@
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
 
 		<?php wp_head(); ?>
+		
+		<script type='text/javascript'>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') +
+		'//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+		})();
+		</script>
+
+		<script type='text/javascript'>
+		googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([768, 0], [728, 90]).
+		addSize([0, 0], [300, 250]).
+		build();
+		googletag.defineSlot('/6880916/Secret-Top-728-300', [728, 90], 'ad-top').
+		defineSizeMapping(mapping).
+		addService(googletag.pubads());
+		googletag.enableServices();
+		});
+
+		googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([768, 0], [728, 90]).
+		addSize([0, 0], [300, 250]).
+		build();
+		googletag.defineSlot('/6880916/Secret-After-728-300', [728, 90], 'ad-after').
+		defineSizeMapping(mapping).
+		addService(googletag.pubads());
+		googletag.enableServices();
+		});
+
+		googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([768, 0], [728, 90]).
+		addSize([0, 0], [300, 250]).
+		build();
+		googletag.defineSlot('/6880916/Secret-Bottom-728-300', [728, 90], 'ad-bottom').
+		defineSizeMapping(mapping).
+		addService(googletag.pubads());
+		googletag.enableServices();
+		});
+
+		googletag.cmd.push(function() {
+		var mapping = googletag.sizeMapping().
+		addSize([768, 0], [336, 280]).
+		addSize([0, 0], [300, 250]).
+		build();
+		googletag.defineSlot('/6880916/Secret-Side-336-300', [336, 280], 'ad-side').
+		defineSizeMapping(mapping).
+		addService(googletag.pubads());
+		googletag.enableServices();
+		});
+
+		</script>
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
